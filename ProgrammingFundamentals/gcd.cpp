@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int n1 = 15, n2 = 20;
+
+   while (n1 > 0 && n2 > 0)
+   {
+      if (n1 > n2)
+      {
+         n1 = n1 % n2;
+      }
+      else
+      {
+         n2 = n2 % n1;
+      }
+   }
+
+   if (n1 == 0)
+   {
+      cout << n2;
+   }
+   else
+   {
+      cout << n1;
+   }
+}
