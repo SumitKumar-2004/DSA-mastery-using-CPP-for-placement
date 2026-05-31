@@ -26,7 +26,7 @@ int minElement(vector<int> nums)
 
 int main()
 {
-   vector<int> nums = {1012, 12, 13, 14};
+   vector<int> nums = {1012git push origin main, 12, 13, 14};
    int ans = minElement(nums);
    cout << ans;
    return 0;
