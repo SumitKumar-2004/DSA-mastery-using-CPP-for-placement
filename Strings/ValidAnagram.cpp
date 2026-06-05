@@ -3,8 +3,7 @@
 // 3. Traverse both strings together:
 //       - Increment count for characters of s.
 //       - Decrement count for characters of t.
-// 4. After traversal, if all frequencies are 0,
-//    both strings contain the same characters with the same frequency.
+// 4. After traversal, if all frequencies are 0,both strings contain the same characters with the same frequency.
 // 5. Return true if all counts are 0, otherwise false.
 
 #include <bits/stdc++.h>
