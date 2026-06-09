@@ -18,9 +18,6 @@ Welcome to my **Data Structures and Algorithms (DSA) journey using C++** 🚀
 This repository contains my topic-wise solutions of DSA problems from platforms like:
 
 - 🔥 LeetCode
-- 💻 Coding Ninjas
-- ⚡ GeeksforGeeks
-- 🧠 Interview Questions
 
 The main goal of this repository is to build strong problem-solving skills and prepare for:
 
