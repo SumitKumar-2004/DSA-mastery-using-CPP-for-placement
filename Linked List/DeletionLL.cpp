@@ -66,11 +66,98 @@ Node *removesHead(Node *head)
    delete temp; // it free up the space after deleting the head
    return head;
 }
+
+// Removes tail of LL
+Node *removesTail(Node *head)
+{
+   if (head == NULL || head->next == NULL)
+   {
+      return NULL;
+   }
+   Node *temp = head;
+   while (temp->next->next != NULL)
+   {
+      temp = temp->next;
+   }
+   free(temp->next);
+   temp->next = nullptr;
+   return head;
+}
+
+// Remove kth position element of LL
+Node *removeKthPos(Node *head, int k)
+{
+   if (head == NULL)
+   {
+      return head;
+   }
+   if (k == 1)
+   {
+      Node *temp = head;
+      head = head->next;
+      free(temp);
+      return head;
+   }
+
+   int count = 0;
+   Node *temp = head;
+   Node *prev = NULL;
+   while (temp != NULL)
+   {
+      count++;
+      if (count == k)
+      {
+         prev->next = prev->next->next;
+         free(temp);
+         break;
+      }
+      prev = temp;
+      temp = temp->next;
+   }
+   return head;
+}
+// Remove any element in the LL
+Node *removeElement(Node *head, int el)
+{
+   if (head == NULL)
+   {
+      return head;
+   }
+   if (head->data == el)
+   {
+      Node *temp = head;
+      head = head->next;
+      free(temp);
+      return head;
+   }
+
+   Node *temp = head;
+   Node *prev = NULL;
+   while (temp != NULL)
+   {
+      if (temp->data == el)
+      {
+         prev->next = prev->next->next;
+         free(temp);
+         break;
+      }
+      prev = temp;
+      temp = temp->next;
+   }
+   return head;
+}
 int main()
 {
    vector<int> arr = {12, 5, 8, 7};
 
    Node *head = convertArr2LL(arr);
-   head = removesHead(head);
+   // head = removesHead(head);
+
+   // head = removesTail(head);
+
+   // head = removeKthPos(head, 6);
+   
+   head = removeElement(head,5);
+   
    printLL(head);
 }
