@@ -36,6 +36,8 @@ int betterApporach(vector<int> &arr)
    }
    return -1;
 }
+//When u hear about majority then moories voting algorithm goes here.
+//In this simply think of a voting condition in which if a candidate has more votes its count increase and if the opponenet has vote the count of candidate is decreases so at the end we found the majority votes candidate 
 int morreVotingAlgorithm(vector<int> &arr)
 {
    int count = 0;
