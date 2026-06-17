@@ -1,18 +1,38 @@
+//it return all unique element from both arrays
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> unionArray(vector<int> &arr1,vector<int> &arr2,int n,int m){
-   set<int> st;
-   for (int i = 0; i < n; i++)
-   {
-      st.insert(arr1[i]);
+   int i = 0;
+   int j = 0;
+   vector<int> ans;
+   while(i < n && j < m){
+      if(arr1[i] <= arr2[j]){
+         if(ans.empty() || ans.back() != arr1[i]){
+            ans.push_back(arr1[i]);
+         }
+         i++;
+      }else {
+         if(ans.empty() || ans.back() != arr2[j]){
+            ans.push_back(arr2[j]);
+         }
+         j++;
+      }
+   }  
+   //Remaining arr1 element
+   while(i < n){
+      if(ans.empty() || ans.back() != arr1[i]){
+         ans.push_back(arr1[i]);
+      }
+      i++;
    }
-   for (int i = 0; i < m; i++)
-   {
-      st.insert(arr2[i]);
+   //Remaining arr2 element
+   while(j < m){
+      if(ans.empty() || ans.back() != arr2[j]){
+         ans.push_back(arr2[j]);
+      }
+      j++;
    }
-   vector<int> unionVector(st.begin(),st.end());
-   return unionVector;
-   
+   return ans;
 }
 int main(){
    vector<int> arr1 = {1,1,2,3,4};
