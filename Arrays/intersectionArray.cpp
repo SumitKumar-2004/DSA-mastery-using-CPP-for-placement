@@ -22,10 +22,8 @@ vector<int> intersectionArray(vector<int> &arr1, vector<int> &arr2, int n, int m
          mpp[it]--;         // decrease frequency to avoid extra duplicates
       }
    }
-
    return ans;
 }
-
 int main()
 {
    vector<int> arr1 = {1, 1, 2, 3, 4};
