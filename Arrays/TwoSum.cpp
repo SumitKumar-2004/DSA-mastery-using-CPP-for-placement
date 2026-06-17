@@ -23,5 +23,4 @@ int main()
    int target = 14;
    vector<int> res = twoSumIndices(arr, target);
    cout << "[" << res[0] << ", " << res[1] << "]\n";
-
 }
