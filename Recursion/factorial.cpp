@@ -11,5 +11,4 @@ int printFact(int n){
 int main(){
    int n = 4;
    cout<<printFact(n);
-
 }
