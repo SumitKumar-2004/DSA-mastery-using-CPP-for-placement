@@ -9,5 +9,4 @@ int printSum(int n){
 int main(){
    int n = 5;
    cout<<printSum(n);
-
 }

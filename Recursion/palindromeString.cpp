@@ -15,6 +15,6 @@ bool f(int i, string &str)
 
 int main()
 {
-   string str = "madamm";
+   string str = "madam";
    cout<<f(0, str);
 }
