@@ -1,25 +1,26 @@
-// Return the count and char of a most frequent char in a string
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-   string str = "banana";
+   string str = "programming";
    int freq[256] = {0};
    for (char ch : str)
    {
       freq[ch]++;
    }
-   int freqCount = 0;
-   char ans;
-   for (int i = 0; i < str.size(); i++)
+   int maxFreq = 0;
+   for (int i = 0; i < 256; i++)
    {
-      if (freq[str[i]] > freqCount)
+      maxFreq = max(maxFreq, freq[i]);
+   }
+   cout << "Characters: ";
+   for (int i = 0; i < 256; i++)
+   {
+      if (freq[i] == maxFreq)
       {
-         freqCount = freq[str[i]];
-         ans = str[i];
+         cout << char(i) << " ";
       }
    }
-   cout << "Character: " << ans << endl;
-   cout << "Frequency: " << freqCount << endl;
+   cout << "\nFrequency: " << maxFreq;
    return 0;
 }
