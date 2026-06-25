@@ -15,6 +15,7 @@ int main(){
    while(i >= 0 && str[i] != ' '){
       count++;
       i--;
+   
    }
    cout<<"The length of last word is :"<<count;
 }
