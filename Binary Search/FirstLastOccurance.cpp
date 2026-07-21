@@ -6,7 +6,7 @@ int firstOccur(vector<int> arr, int target)
     int low = 0;
     int high = arr.size() - 1;
     int ans = -1;
-
+    
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
